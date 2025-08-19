@@ -4,25 +4,25 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: single
 author_profile: true
-
-gallery:
-  - url: /projects/multi_class_cvip/ 
-    image_path: /assets/images/cvip_thumbnail.png
-    caption: "Medical Image Classification"
-    alt: "Multi-class classification of medical images using ViT"
-  - url: /projects/hsi_oillspill/
-    image_path: /assets/images/hsi_oilspill_thumbnail.png
-    caption: "Oil Spill Detection"
-    alt: "Oil Spill Detection from Satellite Images"
-  - url: /projects/iot_ids/
-    image_path: /assets/images/iot_ids_thumbnail.png
-    caption: "Time Series IDS of IIoT network"
-    alt: "Time Series Intrusion Detection System for IIoT"
 ---
 
 I'm Milap, an undergraduate CSE student passionate about Machine Learning, Computer Vision, and AI-driven innovation.  
 I enjoy working on real-world datasets and building end-to-end AI solutions.
 
----
-##  Featured Projects
-{% include gallery caption="Click a project to explore" class="gallery-portrait" %}
+## 📂 Projects
+
+<div class="projects-grid">
+{% for project in site.projects %}
+  <div class="project-card">
+    <a href="{{ project.url | relative_url }}">
+      {% if project.image %}
+        <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" style="max-width:100%; height:auto; display:block;">
+      {% elsif project.header and project.header.overlay_image %}
+        <img src="{{ project.header.overlay_image | relative_url }}" alt="{{ project.title }}" style="max-width:100%; height:auto; display:block;">
+      {% endif %}
+      <h3 style="margin-top:0.4rem">{{ project.title }}</h3>
+    </a>
+    {% if project.excerpt %}<p>{{ project.excerpt }}</p>{% endif %}
+  </div>
+{% endfor %}
+</div>
