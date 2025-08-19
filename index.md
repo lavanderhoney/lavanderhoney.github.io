@@ -16,9 +16,9 @@ I enjoy working on real-world datasets and building end-to-end AI solutions.
   <div class="project-card">
     <a href="{{ project.url | relative_url }}">
       {% if project.image %}
-        <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" style="max-width:100%; height:auto; display:block;">
+        <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" style="width:100%; height:200px; display:block;">
       {% elsif project.header and project.header.overlay_image %}
-        <img src="{{ project.header.overlay_image | relative_url }}" alt="{{ project.title }}" style="max-width:100%; height:auto; display:block;">
+        <img src="{{ project.header.overlay_image | relative_url }}" alt="{{ project.title }}" style="width:100%; height:200px; display:block;">
       {% endif %}
       <h3 style="margin-top:0.4rem">{{ project.title }}</h3>
     </a>

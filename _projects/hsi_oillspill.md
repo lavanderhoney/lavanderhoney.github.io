@@ -2,7 +2,7 @@
 title: "ConvNext based HSI Oil Spill Detection"
 layout: "single"
 excerpt: "Finetuning ConvNext model for classifying 3 types of oil spills"
-image: "path/to/image.jpg"
+image: "assets/images/hsi_oilspill_thumbnail.png"
 header:
     overlay_image: "/assets/images/hsi_oilspill.png"
     overlay_filter: 0.5
